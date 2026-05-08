@@ -51,6 +51,37 @@ public class Lab3P1_OrlandoAvila {
                         }// fin de If
                     }
                 }// fin de case 1
+                break;
+                case 2: {
+                    System.out.println("Ingrese el limite (n):");
+                    int Numpositivo = sc.nextInt();
+                    double suma = 0; 
+                    double cont = 0;
+                    for (int i = 1; i<=Numpositivo; i++){
+                        double numerador = (((i*i)+(3*i)+1)*(i+2));
+                        double denominador = ((2*i)+1); 
+                        double fact = 1;
+                        for (double j = 1; j<=denominador; j++){
+                            fact *= j;                             
+                        }// fin de segundo for
+                        suma += numerador / fact;
+                        cont += suma;
+                    System.out.println("n=" +i+ "suma = " + suma );
+                    }// fin de primer for
+                    System.out.println("La suma de los numeros es de: "+ cont);
+                }// fin de case 2
+                break;
+                case 3: {
+                    System.out.println("Ingrese el tamaño: ");
+                    int tamano = sc.nextInt();
+                    for (int i = 0; i < tamano; i++) {
+                        for (int j = 0; j <= i; j++) {
+                            System.out.print("*");
+                        }// fin de segundo for
+                        System.out.println();
+                    }// fin de primer for
+                }// fin de case 3
+                
             }// fin de switch  
         }// fin de while
     }// fin de void  
