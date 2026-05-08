@@ -71,17 +71,42 @@ public class Lab3P1_OrlandoAvila {
                     System.out.println("La suma de los numeros es de: "+ cont);
                 }// fin de case 2
                 break;
-                case 3: {
-                    System.out.println("Ingrese el tamaño: ");
-                    int tamano = sc.nextInt();
-                    for (int i = 0; i < tamano; i++) {
-                        for (int j = 0; j <= i; j++) {
-                            System.out.print("*");
-                        }// fin de segundo for
+                case 3: { 
+                    int tamano;
+                    System.out.println("Ingrese tamaño: ");
+                    tamano = sc.nextInt();
+                    while (tamano >= 7){                  
+                        for(int i = 0; i <= tamano; i++){
+                            for(int j = 0; j <= tamano; j++){
+                                if (j==0){
+                                    System.out.print("* ");
+                                }    
+                                else if(i==tamano-1){
+                                    System.out.print("* ");
+                                }
+                                else if(i==j){
+                                    System.out.print("* ");
+                                }
+                                else if(j==tamano-i-1){
+                                    System.out.print("* ");
+                                }
+                                else if(i==0 && j>=tamano-3){
+                                    System.out.print("* ");
+                                }
+                                else if(i==1 && j>=tamano-2){
+                                    System.out.print("* ");
+                                }
+                                else{
+                                    System.out.print(" ");
+                            }
+                        }
                         System.out.println();
-                    }// fin de primer for
+                }
+                        System.out.println();
+                    }// fin de while
+                    System.out.println();
                 }// fin de case 3
-                
+                break;
             }// fin de switch  
         }// fin de while
     }// fin de void  
